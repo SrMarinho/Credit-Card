@@ -57,7 +57,7 @@ export default {
     </div>
     <form action="">
         <div class="row center">
-            <div class="input-field s6">
+            <div class="input-field s10">
                 <input type="text" id="cardNumber" v-model="card_number" placeholder="ex: 1234 5678 9012 3456" required>
                 <label for="cardNumber" >Número do cartão</label>
             </div>
@@ -66,7 +66,7 @@ export default {
         <div class="row"></div>
 
         <div class="row center">
-            <div class="input-field s6">
+            <div class="input-field s10">
                 <input type="text" id="cardName" v-model="name" placeholder="ex: Funalo Deutrano" required>
                 <label for="cardName">Nome no cartão</label>
             </div>
@@ -85,6 +85,12 @@ export default {
                 <label for="cardCvv">CVV</label>
             </div>
         </div>
+
+        <div class="row"></div>
+
+        <div class="row center">
+          <a href="javascript:{}" class="btn">Next</a>
+      </div>
     </form>
 </div>
 </template>
@@ -115,7 +121,7 @@ body {
 
 .container {
   width: 400px;
-  height: 400px;
+  height: 350px;
   background-color: white;
   border-radius: 10px;
 }
@@ -276,6 +282,10 @@ body {
   width: 49%;
 }
 
+.input-field.s10 {
+  width: 82.333%;
+}
+
 .input-field input {
   width: 95%;
   height: 95%;
@@ -316,5 +326,22 @@ font-size:16px;
 
 form {
   font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  left: 0;
+  top: -15%;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #2582ad;
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
+  outline: 1px rgba(0, 52, 116, .6) solid;
 }
 </style>
